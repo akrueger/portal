@@ -3,7 +3,11 @@
   "version": "0.0.1",
   "description": "Personal projects",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server --inline --hot",
+    "build": "npm run lint && webpack",
+    "build:short": "webpack",
+    "lint": "eslint . --ext .js --ext .jsx --cache",
+    "test": "ava"
   },
   "repository": {
     "type": "git",
