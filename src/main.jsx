@@ -1,21 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-// const Main = () => 6
+import Container from './components/Container.jsx'
 
-// const root = document.getElementById('root')
-
-// ReactDOM.render(<Main/>, root)
-
-// tutorial1-raw.js
-const Main = React.createClass({
-	render() {
-		const hw = 'Hello World'
-		return (
-			<div>{hw}</div>
-    )
-	}
-})
+const Main = () =>
+	<div>
+		<Container/>
+	</div>
 
 const root = document.getElementById('root')
 
