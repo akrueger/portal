@@ -44,6 +44,7 @@
 			"error"
 		],
 		"comma-dangle": "off",
+		"react/prefer-es6-class": "off",
 		"react/jsx-space-before-closing": "off",
 		"react/jsx-indent": [
 			2, 
