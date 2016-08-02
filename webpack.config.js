@@ -1,9 +1,4 @@
-const Visualizer = require('webpack-visualizer-plugin')
-
 module.exports = {
-	plugins: [
-		new Visualizer()
-	],
 	devtool: 'eval-source-map',
 	entry: './src/main.jsx',
 	output: {
@@ -22,9 +17,9 @@ module.exports = {
 			loader: 'babel'
 		},
 		{
-			test: /\.css$/,
+			test: /\.styl$/,
 			exclude: /node_modules/,
-			loaders: ['style', 'css']
+			loaders: ['style', 'css', 'stylus']
 		}]
 	},
 }
