@@ -1,7 +1,3 @@
-const precss = require('precss')
-const autoprefixer = require('autoprefixer')
-const jeet = require('jeet')
-const yeticss = require('yeticss')
 const Visualizer = require('webpack-visualizer-plugin')
 
 module.exports = {
@@ -27,13 +23,8 @@ module.exports = {
 		},
 		{
 			test: /\.css$/,
-			loaders: ['style', 'css', 'stylus', 'postcss']
+			exclude: /node_modules/,
+			loaders: ['style', 'css']
 		}]
 	},
-	stylus: {
-		use: [jeet(), yeticss()]
-	},
-	postcss() {
-		return [precss, autoprefixer]
-	}
 }

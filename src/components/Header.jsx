@@ -1,6 +1,8 @@
 import React from 'react'
 
+require('../styles/header.css')
+
 const Header = () =>
-	<div>Boot scoot</div>
+	<div className="green">Header</div>
 
 export default Header
