@@ -1,8 +1,13 @@
+const path = require('path')
+
 module.exports = {
 	devtool: 'eval-source-map',
+	devServer: {
+		contentBase: './build',
+	},
 	entry: './src/main.jsx',
 	output: {
-		path: './build',
+		path: path.resolve(__dirname, 'build'),
 		filename: 'bundle.js'
 	},
 	module: {
