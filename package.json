@@ -5,7 +5,6 @@
   "scripts": {
     "start": "webpack-dev-server --inline --hot",
     "build:dev": "npm run lint && webpack",
-    "build:prod": "npm run lint && webpack -p --config webpack.config.production.js",
     "lint": "eslint . --ext .js --ext .jsx --cache",
     "test": "ava"
   },
