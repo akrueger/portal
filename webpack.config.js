@@ -1,5 +1,5 @@
 const path = require('path')
-const yeticss = require('yeticss')
+const poststylus = require('poststylus')
 
 module.exports = {
 	devtool: 'eval-source-map',
@@ -29,6 +29,8 @@ module.exports = {
 		}]
 	},
 	stylus: {
-		use: [yeticss()]
+		use: [
+			poststylus(['autoprefixer'])
+		]
 	}
 }
