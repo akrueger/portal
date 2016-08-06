@@ -1,4 +1,5 @@
 const path = require('path')
+const yeticss = require('yeticss')
 
 module.exports = {
 	devtool: 'eval-source-map',
@@ -27,4 +28,7 @@ module.exports = {
 			loaders: ['style', 'css', 'stylus']
 		}]
 	},
+	stylus: {
+		use: [yeticss()]
+	}
 }

@@ -1,8 +1,6 @@
 import React from 'react'
 
-require('../styles/header.styl')
-
 const Header = () =>
-	<div className="blue">Header</div>
+	<div>Header</div>
 
 export default Header
