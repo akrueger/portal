@@ -3,11 +3,12 @@
   "version": "0.0.1",
   "description": "Personal projects",
   "scripts": {
-    "start:dev": "webpack-dev-server --inline --hot",
-    "start:prod": "node server.js",
-    "build:dev": "npm run lint && webpack",
-    "build:prod": "npm run lint && webpack -p --config webpack.config.production.js",
+    "start:dev": "npm run lint && npm run clean && npm run build:dev && webpack-dev-server --inline --hot",
+    "start:prod": "npm run lint && npm run clean && npm run build:prod && node server.js",
+    "build:dev": "npm run lint && npm run clean && webpack",
+    "build:prod": "npm run lint && npm run clean && webpack -p --config webpack.config.production.js",
     "lint": "eslint . --ext .js --ext .jsx --cache",
+    "clean": "rm -rf build/*",
     "test": "ava"
   },
   "repository": {
@@ -34,6 +35,7 @@
     "eslint-plugin-jsx-a11y": "^1.2.0",
     "eslint-plugin-react": "^5.1.1",
     "extract-text-webpack-plugin": "^1.0.1",
+    "html-webpack-plugin": "^2.22.0",
     "poststylus": "^0.2.3",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",

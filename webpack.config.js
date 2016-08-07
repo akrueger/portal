@@ -1,5 +1,7 @@
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const poststylus = require('poststylus')
+const yeticss = require('yeticss')
 
 module.exports = {
 	devtool: 'eval-source-map',
@@ -11,6 +13,19 @@ module.exports = {
 		path: path.resolve(__dirname, 'build'),
 		filename: 'bundle.js'
 	},
+	plugins: [
+		new HtmlWebpackPlugin({
+			title: 'Andrew Krueger',
+			template: 'index.ejs',
+			minify: {
+				quoteCharacter: '\'',
+				html5: true,
+				removeScriptTypeAttributes: true,
+				removeStyleLinkTypeAttributes: true,
+				useShortDoctype: true
+			}
+		})
+	],
 	module: {
 		preloaders: [{
 			test: /\.jsx?$/,
@@ -30,6 +45,7 @@ module.exports = {
 	},
 	stylus: {
 		use: [
+			yeticss(),
 			poststylus(['autoprefixer'])
 		]
 	}
