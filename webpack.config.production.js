@@ -2,7 +2,6 @@ const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const poststylus = require('poststylus')
-const yeticss = require('yeticss')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
@@ -60,7 +59,6 @@ module.exports = {
 	},
 	stylus: {
 		use: [
-			yeticss(),
 			poststylus(['autoprefixer'])
 		]
 	}
